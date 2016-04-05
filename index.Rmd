@@ -12,7 +12,7 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 github:
   user: ricardoscr
-  repo: dataproductslides
+  repo: Developing-Data-Products
 ---
 
 ```{r, echo=FALSE, results='hide', warning=FALSE}
