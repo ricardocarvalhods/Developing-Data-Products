@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Death Risk Analysis</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Death Risk Analysis">
+  <meta name="author" content="Ricardo S. Carvalho">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/style.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/coursera.svg">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Death Risk Analysis</h1>
+    <h2>Developing Data Products - Course Project</h2>
+    <p>Ricardo S. Carvalho<br/>Coursera Data Science Specialization</p>
+  </hgroup>
+    <a href="https://github.com/ricardoscr/dataproductslides/zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Overview of the app</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>We give death rates little attention on our daily lives, except when they are forced on us by some catastrophe, societal or personal.</li>
+<li>It is useful to be reminded of the major effects on death rates - namely our sex, and our age.</li>
+<li>The shiny app built does the following analysis for specific user given age and gender:
+
+<ul>
+<li>Age effects</li>
+<li>Gender effects</li>
+<li>Prediction from Linear Model</li>
+</ul></li>
+<li>Link for the app: <a href="https://ricardosc.shinyapps.io/DevDataProd/">https://ricardosc.shinyapps.io/DevDataProd/</a></li>
+<li>Data were taken from UK national mortality statistics
+
+<ul>
+<li><a href="http://www.medicine.ox.ac.uk/bandolier/booth/Risk/dyingage.html">http://www.medicine.ox.ac.uk/bandolier/booth/Risk/dyingage.html</a></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Age</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Historical data shows that, generally, for any gender, the older you get, the greater is your risk of dying in any one year, so we have to be careful.</li>
+<li>Our app, for a gender given by the user (labeled as <strong>You</strong>), shows how the age affects death risk, as on the following plot:
+<img src="assets/fig/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" /></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Gender</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Additionally, our app gives a gender analysis for death risk specific for the user (labeled as <strong>You</strong>), as in the following plot:
+<img src="assets/fig/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" /></li>
+<li>Although, that gender analysis is too simplistic. Therefore, our app takes a Two Sample T-Test, which gives a p-value of 0.605, stating that we cannot affirm, with the data available, that there is a significant difference in risk for gender.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Linear Model</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Using a linear regression for death risk, our app shows the predictive model, along with the user data (labeled as <strong>You</strong>) and the original data.</li>
+<li>The linear model is as close as possible to the points, but it may produce different risks than the original data points. Our app shows how the predicted risk compares to the original risk for the user, as in the image:
+<img src="assets/fig/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" /></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Overview of the app'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Age'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Gender'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Linear Model'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

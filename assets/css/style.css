@@ -1,0 +1,6 @@
+slide:not(.segue) h2{
+  font-family: 'Impact', serif;
+        font-weight: 500;
+        line-height: 1.1;
+        color: #000099;
+}
